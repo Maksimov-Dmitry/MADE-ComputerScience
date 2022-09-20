@@ -22,10 +22,7 @@ do
 					| grep -E '<|>' | wc -l)
 
 		score=$(($1 - base_fine * wrong_lines))
-		if [ $score -lt 0 ]
-		then
-			score=0
-		fi
+		score=$((score<0 ? 0 : score))
 		if [ $score -ne $1 ]
 		then
 			echo "$student_name has incorrect output ($wrong_lines lines do not match)"
