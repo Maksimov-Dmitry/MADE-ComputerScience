@@ -1,3 +1,3 @@
-import nump
+import numpy
 
-array = nump.array([1, 2, 3])
+array = numpy.array([1, 2, 3])
